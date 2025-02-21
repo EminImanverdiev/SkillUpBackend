@@ -1,6 +1,8 @@
+using Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
 
-
+builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
