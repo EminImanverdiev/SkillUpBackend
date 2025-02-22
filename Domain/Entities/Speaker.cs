@@ -10,5 +10,6 @@ public class Speaker:BaseEntity
     public string Bio { get; set; }
     public string ImageURL { get; set; }
     public string ImageName { get; set; }
-    //sosial medialarin unutma))
+    public ICollection<SocialMedia> SocialMedias { get; set; }=new List<SocialMedia>(); 
+    public ICollection<Event> Events { get; set; }=new List<Event>();
 }

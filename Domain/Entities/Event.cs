@@ -18,5 +18,5 @@ public class Event : BaseEntity
     public string Organizer { get; set; }
     public int AttendeeCount { get; set; }
     public string YouTubeLink { get; set; }
-    public ICollection<Speaker> Speakers { get; set; } = new Collection<Speaker>();  
+    public ICollection<Speaker> Speakers { get; set; } = new List<Speaker>();  
 }

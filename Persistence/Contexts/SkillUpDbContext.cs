@@ -19,5 +19,12 @@ public class SkillUpDbContext:DbContext
     DbSet<ContactInfo> ContactInfos { get; set; }
     DbSet<Course> Courses { get; set; }
     DbSet<Event> Events { get; set; }
+    DbSet<SocialMedia> SocialMedias { get; set; }
+    DbSet<Service> Services { get; set; }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(SkillUpDbContext).Assembly);
+        base.OnModelCreating(modelBuilder);
+    }
 
 }
